@@ -3,27 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KOPRINKA BIKE</title>
+<title>KOPRINKA BIKE — Изтегли приложението / Get the app</title>
+<meta name="description" content="Изтеглете приложението KOPRINKA BIKE за Android и iOS — велосипедни маршрути около язовир „Копринка“. Download the KOPRINKA BIKE app for Android and iOS.">
+<meta name="theme-color" content="#2e7d32">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOPRINKA BIKE">
+<meta property="og:description" content="Велосипедни маршрути около язовир „Копринка“ / Cycling routes around Koprinka Reservoir">
+<meta property="og:url" content="https://tdorlovognezdo.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%232E7D32'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='38' cy='56' r='10'/%3E%3Ccircle cx='70' cy='56' r='10'/%3E%3Cpath d='M38 56h12l8-14 12 14M58 42h6'/%3E%3C/g%3E%3C/svg%3E">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    margin: 0 auto; max-width: 34rem; padding: 4rem 1.25rem;
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1a1c19; background: #f6f8f4;
+  :root {
+    color-scheme: light dark;
+    --bg: #f6f8f4; --fg: #1a1c19; --muted: #4a5247;
+    --card: #fff; --line: #d7e0d3; --brand: #2e7d32; --on-brand: #fff;
   }
-  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
-  p.sub { color: #424940; margin: 0 0 2rem; }
-  a { color: #2e7d32; }
   @media (prefers-color-scheme: dark) {
-    body { color: #e3e3dd; background: #17190f; }
-    p.sub { color: #c2c9bd; }
-    a { color: #9bd49b; }
+    :root {
+      --bg: #12150f; --fg: #e3e5de; --muted: #b2baae;
+      --card: #1c2019; --line: #2f352a; --brand: #78c67c; --on-brand: #0c2010;
+    }
   }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 2.5rem 1.25rem 3rem;
+    display: flex; align-items: center; justify-content: center;
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--fg); background: var(--bg); -webkit-text-size-adjust: 100%;
+  }
+  main { width: 100%; max-width: 25rem; text-align: center; }
+  .logo { display: block; width: 92px; height: 92px; margin: 0 auto 1.1rem; border-radius: 21px; }
+  h1 { font-size: 1.7rem; letter-spacing: .02em; margin: 0 0 .4rem; }
+  .sub { color: var(--muted); margin: 0; }
+  .sub.en { font-size: .93rem; opacity: .85; margin: .1rem 0 1.9rem; }
+  .btn {
+    display: flex; align-items: center; gap: .85rem; width: 100%;
+    padding: .85rem 1.1rem; margin-bottom: .7rem;
+    border: 1px solid var(--line); border-radius: 14px;
+    background: var(--card); color: var(--fg);
+    text-align: left; text-decoration: none;
+  }
+  .btn svg { width: 26px; height: 26px; flex: none; }
+  .btn .label { display: flex; flex-direction: column; line-height: 1.25; }
+  .btn .label small { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+  .btn .label strong { font-size: 1.1rem; font-weight: 600; }
+  .btn.primary { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+  .btn.primary .label small { color: inherit; opacity: .85; }
+  .btn:active { transform: scale(.99); }
+  .btn.soon { opacity: .55; cursor: default; }
+  .note { min-height: 1.3rem; margin: 1.2rem 0 0; font-size: .9rem; color: var(--muted); }
+  footer { margin-top: 2.4rem; font-size: .88rem; }
+  footer a { color: var(--muted); }
 </style>
 </head>
 <body>
-  <h1>KOPRINKA BIKE</h1>
-  <p class="sub">Велосипедни маршрути около язовир „Копринка“</p>
-  <p><a href="/koprinka-bike/privacy/">Политика за поверителност</a></p>
+  <main>
+    <svg class="logo" viewBox="0 0 108 108" role="img" aria-label="KOPRINKA BIKE">
+      <rect width="108" height="108" rx="24" fill="#2E7D32"/>
+      <g fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M28,74 C36,68 44,80 52,74 C60,68 68,80 76,74"/>
+        <circle cx="38" cy="56" r="10"/>
+        <circle cx="70" cy="56" r="10"/>
+        <path d="M38,56 L50,56 L58,42 L70,56 M50,56 L58,42 M58,42 L64,42"/>
+      </g>
+    </svg>
+
+    <h1>KOPRINKA BIKE</h1>
+    <p class="sub">Велосипедни маршрути около язовир „Копринка“</p>
+    <p class="sub en">Cycling routes around Koprinka Reservoir</p>
+
+    <a class="btn primary" id="btn-android" href="https://play.google.com/store/apps/details?id=bg.kazanlak.koprinkabike">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zM12.207 10.5l2.869-2.852L2.521.588a1.502 1.502 0 0 0-.117-.06L12.207 10.5zm0 3l-9.814 9.977c.044-.02.09-.039.136-.063l12.536-7.045-2.858-2.869z"/></svg>
+      <span class="label"><small>Изтегли от · Get it on</small><strong>Google Play</strong></span>
+    </a>
+
+    <a class="btn soon" id="btn-ios" aria-disabled="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+      <span class="label"><small id="ios-small">Очаквайте скоро · Coming soon</small><strong>App Store</strong></span>
+    </a>
+
+    <p class="note" id="note"></p>
+
+    <footer><a href="/koprinka-bike/privacy/">Политика за поверителност · Privacy policy</a></footer>
+  </main>
+
+  <script>
+    /* ──────────────────────────────────────────────────────────────────────
+       When the iOS app is live, paste its App Store link below and push.
+       The printed QR code keeps working — nothing else has to change.
+       Example: "https://apps.apple.com/bg/app/koprinka-bike/id1234567890"
+       ────────────────────────────────────────────────────────────────────── */
+    var IOS_URL = "";
+
+    (function () {
+      var android = document.getElementById('btn-android');
+      var ios = document.getElementById('btn-ios');
+      var note = document.getElementById('note');
+      var ua = navigator.userAgent || '';
+      var isAndroid = /Android/i.test(ua);
+      var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                  (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var iosUrl = IOS_URL.replace(/^\s+|\s+$/g, '');
+
+      if (iosUrl) {
+        ios.href = iosUrl;
+        ios.className = 'btn';
+        ios.removeAttribute('aria-disabled');
+        document.getElementById('ios-small').textContent = 'Изтегли от · Download on the';
+        if (isIOS) {
+          ios.className = 'btn primary';
+          android.className = 'btn';
+        }
+      } else if (isIOS) {
+        note.textContent = 'Версията за iOS излиза съвсем скоро — запазете тази страница. ' +
+                           'The iOS app is coming very soon — bookmark this page.';
+      }
+
+      if (!isAndroid) return;
+      if (location.search.indexOf('stay=1') !== -1) return;
+      try {
+        if (sessionStorage.getItem('kb-sent')) return;
+        sessionStorage.setItem('kb-sent', '1');
+      } catch (e) {}
+      note.textContent = 'Пренасочваме ви към Google Play… · Redirecting to Google Play…';
+      location.replace(android.href);
+    })();
+  </script>
 </body>
 </html>
